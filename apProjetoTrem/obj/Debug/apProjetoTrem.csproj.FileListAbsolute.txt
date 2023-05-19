@@ -1,0 +1,11 @@
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\bin\Debug\apProjetoTrem.exe.config
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\bin\Debug\apProjetoTrem.exe
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\bin\Debug\apProjetoTrem.pdb
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.csproj.AssemblyReference.cache
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.csproj.SuggestedBindingRedirects.cache
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.Form1.resources
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.Properties.Resources.resources
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.csproj.GenerateResource.cache
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.csproj.CoreCompileInputs.cache
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.exe
+C:\Users\u22147\source\repos\apProjetoTrem\apProjetoTrem\obj\Debug\apProjetoTrem.pdb

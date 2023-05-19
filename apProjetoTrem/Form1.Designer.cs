@@ -1,0 +1,613 @@
+﻿namespace apProjetoTrem
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Variável de designer necessária.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpar os recursos que estão sendo usados.
+        /// </summary>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código gerado pelo Windows Form Designer
+
+        /// <summary>
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.pbMapa = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gbCidades = new System.Windows.Forms.GroupBox();
+            this.gbCaminhos = new System.Windows.Forms.GroupBox();
+            this.btnCidades = new System.Windows.Forms.Button();
+            this.btnHash = new System.Windows.Forms.Button();
+            this.btnSubtrai = new System.Windows.Forms.Button();
+            this.btnSoma = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numDistancia = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbDestino = new System.Windows.Forms.ComboBox();
+            this.cbOrigem = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCaminhos = new System.Windows.Forms.Button();
+            this.lsbCidades = new System.Windows.Forms.ListBox();
+            this.txtCoordY = new System.Windows.Forms.TextBox();
+            this.txtCoordX = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnAnterior = new System.Windows.Forms.ToolStripButton();
+            this.btnUltimo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnProcurar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnNovo = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSair = new System.Windows.Forms.ToolStripButton();
+            this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMapa)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.gbCidades.SuspendLayout();
+            this.gbCaminhos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDistancia)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pbMapa
+            // 
+            this.pbMapa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMapa.Image = global::apProjetoTrem.Properties.Resources.mapaEspanhaPortugal;
+            this.pbMapa.Location = new System.Drawing.Point(315, 46);
+            this.pbMapa.Name = "pbMapa";
+            this.pbMapa.Size = new System.Drawing.Size(485, 382);
+            this.pbMapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMapa.TabIndex = 0;
+            this.pbMapa.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel1.Controls.Add(this.gbCidades);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(309, 398);
+            this.panel1.TabIndex = 1;
+            // 
+            // gbCidades
+            // 
+            this.gbCidades.Controls.Add(this.gbCaminhos);
+            this.gbCidades.Controls.Add(this.btnCaminhos);
+            this.gbCidades.Controls.Add(this.lsbCidades);
+            this.gbCidades.Controls.Add(this.txtCoordY);
+            this.gbCidades.Controls.Add(this.txtCoordX);
+            this.gbCidades.Controls.Add(this.label4);
+            this.gbCidades.Controls.Add(this.label3);
+            this.gbCidades.Controls.Add(this.txtNome);
+            this.gbCidades.Controls.Add(this.label2);
+            this.gbCidades.Controls.Add(this.txtCodigo);
+            this.gbCidades.Controls.Add(this.label1);
+            this.gbCidades.Location = new System.Drawing.Point(13, 7);
+            this.gbCidades.Name = "gbCidades";
+            this.gbCidades.Size = new System.Drawing.Size(279, 382);
+            this.gbCidades.TabIndex = 0;
+            this.gbCidades.TabStop = false;
+            this.gbCidades.Text = "Cidades";
+            // 
+            // gbCaminhos
+            // 
+            this.gbCaminhos.Controls.Add(this.btnCidades);
+            this.gbCaminhos.Controls.Add(this.btnHash);
+            this.gbCaminhos.Controls.Add(this.btnSubtrai);
+            this.gbCaminhos.Controls.Add(this.btnSoma);
+            this.gbCaminhos.Controls.Add(this.numericUpDown2);
+            this.gbCaminhos.Controls.Add(this.numericUpDown1);
+            this.gbCaminhos.Controls.Add(this.label10);
+            this.gbCaminhos.Controls.Add(this.label9);
+            this.gbCaminhos.Controls.Add(this.numDistancia);
+            this.gbCaminhos.Controls.Add(this.label8);
+            this.gbCaminhos.Controls.Add(this.cbDestino);
+            this.gbCaminhos.Controls.Add(this.cbOrigem);
+            this.gbCaminhos.Controls.Add(this.label7);
+            this.gbCaminhos.Controls.Add(this.label6);
+            this.gbCaminhos.Controls.Add(this.label5);
+            this.gbCaminhos.Location = new System.Drawing.Point(0, 0);
+            this.gbCaminhos.Name = "gbCaminhos";
+            this.gbCaminhos.Size = new System.Drawing.Size(279, 382);
+            this.gbCaminhos.TabIndex = 3;
+            this.gbCaminhos.TabStop = false;
+            this.gbCaminhos.Text = "Caminhos";
+            this.gbCaminhos.Visible = false;
+            // 
+            // btnCidades
+            // 
+            this.btnCidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCidades.Location = new System.Drawing.Point(75, 324);
+            this.btnCidades.Name = "btnCidades";
+            this.btnCidades.Size = new System.Drawing.Size(109, 28);
+            this.btnCidades.TabIndex = 25;
+            this.btnCidades.Text = "Cidades";
+            this.btnCidades.UseVisualStyleBackColor = true;
+            this.btnCidades.Click += new System.EventHandler(this.btnCidades_Click);
+            // 
+            // btnHash
+            // 
+            this.btnHash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHash.Location = new System.Drawing.Point(125, 232);
+            this.btnHash.Name = "btnHash";
+            this.btnHash.Size = new System.Drawing.Size(47, 41);
+            this.btnHash.TabIndex = 24;
+            this.btnHash.Text = "#";
+            this.btnHash.UseVisualStyleBackColor = true;
+            // 
+            // btnSubtrai
+            // 
+            this.btnSubtrai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubtrai.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubtrai.Location = new System.Drawing.Point(72, 232);
+            this.btnSubtrai.Name = "btnSubtrai";
+            this.btnSubtrai.Size = new System.Drawing.Size(47, 41);
+            this.btnSubtrai.TabIndex = 23;
+            this.btnSubtrai.Text = "-";
+            this.btnSubtrai.UseVisualStyleBackColor = true;
+            // 
+            // btnSoma
+            // 
+            this.btnSoma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSoma.Location = new System.Drawing.Point(19, 232);
+            this.btnSoma.Name = "btnSoma";
+            this.btnSoma.Size = new System.Drawing.Size(47, 41);
+            this.btnSoma.TabIndex = 22;
+            this.btnSoma.Text = "+";
+            this.btnSoma.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(84, 198);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDown2.TabIndex = 21;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(84, 165);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDown1.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 198);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 15);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Custo:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 165);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 15);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Tempo:";
+            // 
+            // numDistancia
+            // 
+            this.numDistancia.Location = new System.Drawing.Point(84, 127);
+            this.numDistancia.Name = "numDistancia";
+            this.numDistancia.Size = new System.Drawing.Size(85, 20);
+            this.numDistancia.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(17, 129);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 15);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Distância:";
+            // 
+            // cbDestino
+            // 
+            this.cbDestino.FormattingEnabled = true;
+            this.cbDestino.Location = new System.Drawing.Point(127, 86);
+            this.cbDestino.Name = "cbDestino";
+            this.cbDestino.Size = new System.Drawing.Size(84, 21);
+            this.cbDestino.TabIndex = 15;
+            // 
+            // cbOrigem
+            // 
+            this.cbOrigem.FormattingEnabled = true;
+            this.cbOrigem.Location = new System.Drawing.Point(20, 86);
+            this.cbOrigem.Name = "cbOrigem";
+            this.cbOrigem.Size = new System.Drawing.Size(84, 21);
+            this.cbOrigem.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(124, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 15);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Destino:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 15);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Origem:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ligações";
+            // 
+            // btnCaminhos
+            // 
+            this.btnCaminhos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaminhos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaminhos.Location = new System.Drawing.Point(75, 334);
+            this.btnCaminhos.Name = "btnCaminhos";
+            this.btnCaminhos.Size = new System.Drawing.Size(109, 28);
+            this.btnCaminhos.TabIndex = 9;
+            this.btnCaminhos.Text = "Caminhos";
+            this.btnCaminhos.UseVisualStyleBackColor = true;
+            this.btnCaminhos.Click += new System.EventHandler(this.btnAlternar_Click);
+            // 
+            // lsbCidades
+            // 
+            this.lsbCidades.FormattingEnabled = true;
+            this.lsbCidades.Location = new System.Drawing.Point(19, 171);
+            this.lsbCidades.Name = "lsbCidades";
+            this.lsbCidades.Size = new System.Drawing.Size(242, 147);
+            this.lsbCidades.TabIndex = 8;
+            // 
+            // txtCoordY
+            // 
+            this.txtCoordY.Location = new System.Drawing.Point(131, 138);
+            this.txtCoordY.Name = "txtCoordY";
+            this.txtCoordY.Size = new System.Drawing.Size(130, 20);
+            this.txtCoordY.TabIndex = 7;
+            // 
+            // txtCoordX
+            // 
+            this.txtCoordX.Location = new System.Drawing.Point(131, 105);
+            this.txtCoordX.Name = "txtCoordX";
+            this.txtCoordX.Size = new System.Drawing.Size(130, 20);
+            this.txtCoordX.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Coordenada Y:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Coordenada X:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(131, 66);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(130, 20);
+            this.txtNome.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nome da Cidade:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(131, 31);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(130, 20);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Código da Cidade:";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.btnAnterior,
+            this.btnUltimo,
+            this.toolStripSeparator1,
+            this.btnProcurar,
+            this.toolStripSeparator2,
+            this.btnNovo,
+            this.btnCancelar,
+            this.btnSalvar,
+            this.toolStripSeparator3,
+            this.btnExcluir,
+            this.toolStripSeparator4,
+            this.btnSair});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 43);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(52, 40);
+            this.toolStripButton1.Text = "Inicio";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(74, 40);
+            this.toolStripButton2.Text = "Anterior";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
+            this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(74, 40);
+            this.btnAnterior.Text = "Anterior";
+            this.btnAnterior.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnUltimo
+            // 
+            this.btnUltimo.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUltimo.Image = ((System.Drawing.Image)(resources.GetObject("btnUltimo.Image")));
+            this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUltimo.Name = "btnUltimo";
+            this.btnUltimo.Size = new System.Drawing.Size(62, 40);
+            this.btnUltimo.Text = "Ultimo";
+            this.btnUltimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 43);
+            // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurar.Image = ((System.Drawing.Image)(resources.GetObject("btnProcurar.Image")));
+            this.btnProcurar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(75, 40);
+            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 43);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(53, 40);
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 40);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(56, 40);
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 43);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(60, 40);
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 43);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(40, 40);
+            this.btnSair.Text = "Sair";
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // dlgAbrir
+            // 
+            this.dlgAbrir.FileName = "Cidades";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 437);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbMapa);
+            this.MinimumSize = new System.Drawing.Size(816, 476);
+            this.Name = "Form1";
+            this.Text = "Mapeamento de Cidades";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMapa)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.gbCidades.ResumeLayout(false);
+            this.gbCidades.PerformLayout();
+            this.gbCaminhos.ResumeLayout(false);
+            this.gbCaminhos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDistancia)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pbMapa;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox gbCidades;
+        private System.Windows.Forms.Button btnCaminhos;
+        private System.Windows.Forms.ListBox lsbCidades;
+        private System.Windows.Forms.TextBox txtCoordY;
+        private System.Windows.Forms.TextBox txtCoordX;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btnAnterior;
+        private System.Windows.Forms.ToolStripButton btnUltimo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnProcurar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnNovo;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnSalvar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnExcluir;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton btnSair;
+        private System.Windows.Forms.GroupBox gbCaminhos;
+        private System.Windows.Forms.Button btnHash;
+        private System.Windows.Forms.Button btnSubtrai;
+        private System.Windows.Forms.Button btnSoma;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown numDistancia;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbDestino;
+        private System.Windows.Forms.ComboBox cbOrigem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCidades;
+        private System.Windows.Forms.OpenFileDialog dlgAbrir;
+    }
+}
+
