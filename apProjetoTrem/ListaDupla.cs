@@ -16,7 +16,32 @@ class ListaDupla<Dado> : IDados<Dado>
     }
 
     public Situacao SituacaoAtual { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int PosicaoAtual { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int PosicaoAtual { 
+        get 
+        {
+            int pos = 0;
+            Dado dado = new Dado();
+            dado = DadoAtual();
+            PosicionarNoPrimeiro();
+            while(atual != null)
+            {
+                if(atual.Info.CompareTo(dado) == 0)
+                {
+                    break;
+                }
+                AvancarPosicao();
+                pos++;
+            }
+            return pos;
+        }
+        set
+        {
+            for(int i = 0; i < value; i++)
+            {
+                AvancarPosicao();
+            }
+        } 
+    }
     public bool EstaNoInicio => atual == primeiro;
     public bool EstaNoFim => atual == ultimo;
     public bool EstaVazio => quantosNos <= 0;         // (bool) Verificar se está vazia
@@ -43,11 +68,13 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void RetrocederPosicao()        // Retroceder atual para o nó anterior para ser acessado
     {
-        atual = atual.Anterior;
+        if (atual.Anterior != null)
+            atual = atual.Anterior;
     }
     public void AvancarPosicao()
     {
-        atual = atual.Prox;
+        if(atual.Prox != null)
+            atual = atual.Prox;
     }
     public void PosicionarNoUltimo()        // posicionar atual no último nó para ser acessado
     {
@@ -55,7 +82,11 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void PosicionarEm(int posicaoDesejada)
     {
-        throw new NotImplementedException();
+        PosicionarNoPrimeiro();
+        for(int i = 0; i < posicaoDesejada; i++)
+        {
+            AvancarPosicao();
+        }
     }
 
     // (bool) Pesquisar Dado procurado em ordem crescente; a pesquisa

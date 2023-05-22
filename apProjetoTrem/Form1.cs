@@ -33,8 +33,14 @@ namespace apProjetoTrem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            gbCaminhos.Visible = true;
-            MessageBox.Show(gbCaminhos.Visible.ToString());
+            cidades.PosicionarNoPrimeiro();
+            Cidade cid = cidades.DadoAtual();
+            txtCodigo.Text = cidades.PosicaoAtual.ToString();
+            txtNome.Text = cid.Nome;
+            txtCoordX.Text = cid.X.ToString();
+            txtCoordY.Text = cid.Y.ToString();
+
+            VerificarBotoes();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,8 +50,97 @@ namespace apProjetoTrem
             {
                 cidades.LerDados(dlgAbrir.FileName);
                 lsbCidades.Items.Clear();
-                lsbCidades.Items.Add("Nome                  X       Y");
+                lsbCidades.Items.Add("Nome                X        Y");
                 cidades.ExibirDados(lsbCidades);
+
+                cidades.PosicionarNoPrimeiro();
+                Cidade cid = cidades.DadoAtual();
+                txtCodigo.Text = cidades.PosicaoAtual.ToString();
+                txtNome.Text = cid.Nome;
+                txtCoordX.Text = cid.X.ToString();
+                txtCoordY.Text = cid.Y.ToString();
+
+                VerificarBotoes();
+            }
+        }
+
+        private void VerificarBotoes()
+        {
+            if (cidades.EstaNoInicio)
+            {
+                btnAnterior.Enabled = false;
+                btnInicio.Enabled = false;
+            }
+            else
+            {
+                btnAnterior.Enabled = true;
+                btnInicio.Enabled = true;
+            }
+            if (cidades.EstaNoFim)
+            {
+                btnProx.Enabled = false;
+                btnUltimo.Enabled = false;
+            }
+            else
+            {
+                btnProx.Enabled = true;
+                btnUltimo.Enabled = true;
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            cidades.RetrocederPosicao();
+            Cidade cid = cidades.DadoAtual();
+            txtCodigo.Text = cidades.PosicaoAtual.ToString();
+            txtNome.Text = cid.Nome;
+            txtCoordX.Text = cid.X.ToString();
+            txtCoordY.Text = cid.Y.ToString();
+
+            VerificarBotoes();
+        }
+
+        private void btnProx_Click(object sender, EventArgs e)
+        {
+            cidades.AvancarPosicao();
+            Cidade cid = cidades.DadoAtual();
+            txtCodigo.Text = cidades.PosicaoAtual.ToString();
+            txtNome.Text = cid.Nome;
+            txtCoordX.Text = cid.X.ToString();
+            txtCoordY.Text = cid.Y.ToString();
+
+            VerificarBotoes();
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            cidades.PosicionarNoUltimo();
+            Cidade cid = cidades.DadoAtual();
+            txtCodigo.Text = cidades.PosicaoAtual.ToString();
+            txtNome.Text = cid.Nome;
+            txtCoordX.Text = cid.X.ToString();
+            txtCoordY.Text = cid.Y.ToString();
+
+            VerificarBotoes();
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int posicaoAProcurar = int.Parse(txtCodigo.Text);
+                cidades.PosicionarEm(posicaoAProcurar);
+                Cidade cid = cidades.DadoAtual();
+                txtCodigo.Text = cidades.PosicaoAtual.ToString();
+                txtNome.Text = cid.Nome;
+                txtCoordX.Text = cid.X.ToString();
+                txtCoordY.Text = cid.Y.ToString();
+
+                VerificarBotoes();
+            }
+            catch
+            {
+                MessageBox.Show("Digite um código válido!", "Código inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

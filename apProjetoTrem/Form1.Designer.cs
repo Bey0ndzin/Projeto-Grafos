@@ -59,9 +59,9 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnInicio = new System.Windows.Forms.ToolStripButton();
             this.btnAnterior = new System.Windows.Forms.ToolStripButton();
+            this.btnProx = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnProcurar = new System.Windows.Forms.ToolStripButton();
@@ -309,10 +309,12 @@
             // 
             // lsbCidades
             // 
+            this.lsbCidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbCidades.FormattingEnabled = true;
+            this.lsbCidades.ItemHeight = 16;
             this.lsbCidades.Location = new System.Drawing.Point(19, 171);
             this.lsbCidades.Name = "lsbCidades";
-            this.lsbCidades.Size = new System.Drawing.Size(242, 147);
+            this.lsbCidades.Size = new System.Drawing.Size(242, 132);
             this.lsbCidades.TabIndex = 8;
             // 
             // txtCoordY
@@ -387,9 +389,9 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
+            this.btnInicio,
             this.btnAnterior,
+            this.btnProx,
             this.btnUltimo,
             this.toolStripSeparator1,
             this.btnProcurar,
@@ -407,26 +409,16 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnInicio
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(52, 40);
-            this.toolStripButton1.Text = "Inicio";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(74, 40);
-            this.toolStripButton2.Text = "Anterior";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(52, 40);
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInicio.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // btnAnterior
             // 
@@ -437,6 +429,18 @@
             this.btnAnterior.Size = new System.Drawing.Size(74, 40);
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // btnProx
+            // 
+            this.btnProx.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProx.Image = ((System.Drawing.Image)(resources.GetObject("btnProx.Image")));
+            this.btnProx.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProx.Name = "btnProx";
+            this.btnProx.Size = new System.Drawing.Size(74, 40);
+            this.btnProx.Text = "Proximo";
+            this.btnProx.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProx.Click += new System.EventHandler(this.btnProx_Click);
             // 
             // btnUltimo
             // 
@@ -447,6 +451,7 @@
             this.btnUltimo.Size = new System.Drawing.Size(62, 40);
             this.btnUltimo.Text = "Ultimo";
             this.btnUltimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // toolStripSeparator1
             // 
@@ -463,6 +468,7 @@
             this.btnProcurar.Size = new System.Drawing.Size(75, 40);
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -577,9 +583,9 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btnInicio;
         private System.Windows.Forms.ToolStripButton btnAnterior;
+        private System.Windows.Forms.ToolStripButton btnProx;
         private System.Windows.Forms.ToolStripButton btnUltimo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnProcurar;
