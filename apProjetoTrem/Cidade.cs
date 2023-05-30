@@ -19,7 +19,7 @@ using System.IO;
     public double X         { get => x; set => x = value; }
     public double Y         { get => y; set => y = value; }
 
-    public Cidade(string nome, int x, int y)
+    public Cidade(string nome, double x, double y)
     {
         Nome = nome;
         X = x;
@@ -59,6 +59,6 @@ using System.IO;
 
     public override string ToString()
     {
-      return Nome + " " + X.ToString().PadLeft(tamX,' ') + Y.ToString().PadLeft(tamY, ' ');
+      return Nome + X.ToString().PadLeft(tamX,' ') + Y.ToString().PadLeft(tamY, ' ');
     }
   }

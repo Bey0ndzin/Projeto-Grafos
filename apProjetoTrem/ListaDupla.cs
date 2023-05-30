@@ -8,6 +8,7 @@ class ListaDupla<Dado> : IDados<Dado>
 {
     NoDuplo<Dado> primeiro, ultimo, atual;
     int quantosNos;
+    Situacao situacao = Situacao.navegando;
 
     public ListaDupla()
     {
@@ -15,7 +16,7 @@ class ListaDupla<Dado> : IDados<Dado>
         quantosNos = 0; 
     }
 
-    public Situacao SituacaoAtual { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public Situacao SituacaoAtual { get => situacao; set => situacao = value; }
     public int PosicaoAtual { 
         get 
         {
@@ -60,7 +61,16 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void GravarDados(string nomeArquivo)  // gravará sequencialmente, no arquivo cujo nome é passado por parâmetro, os dados armazenados na lista
     {
-        throw new NotImplementedException();
+        StreamWriter gravador = new StreamWriter(nomeArquivo);
+        gravador.Flush();
+        PosicionarNoPrimeiro();
+        while(!EstaNoFim)
+        {
+            gravador.WriteLine(DadoAtual().ToString());
+            AvancarPosicao();
+        }
+        gravador.WriteLine(DadoAtual().ToString());
+        gravador.Close();
     }
     public void PosicionarNoPrimeiro()        // Posicionar atual no primeiro nó para ser acessado
     {
@@ -68,12 +78,12 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void RetrocederPosicao()        // Retroceder atual para o nó anterior para ser acessado
     {
-        if (atual.Anterior != null)
+        if (!EstaNoInicio)
             atual = atual.Anterior;
     }
     public void AvancarPosicao()
     {
-        if(atual.Prox != null)
+        if(!EstaNoFim)
             atual = atual.Prox;
     }
     public void PosicionarNoUltimo()        // posicionar atual no último nó para ser acessado
@@ -95,7 +105,7 @@ class ListaDupla<Dado> : IDados<Dado>
     // onde deveria estar o nó procurado
     public bool Existe(Dado procurado, out int ondeEsta)
     {
-        ondeEsta = -1;
+        ondeEsta = 0;
         atual = null;
         if (!EstaVazio)
         {
@@ -130,7 +140,34 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public bool Excluir(Dado dadoAExcluir)
     {
-        throw new NotImplementedException();
+        bool excluiu = false;
+        Existe(dadoAExcluir, out int pos);
+        if (pos <= -1)
+            return excluiu;
+        else
+        {
+            PosicionarEm(pos);
+            if (!EstaNoInicio && !EstaNoFim)
+            {
+                atual.Anterior.Prox = atual.Prox;
+                atual.Prox.Anterior = atual.Anterior;
+                PosicionarEm(pos + 1);
+            }
+            else if (EstaNoInicio)
+            {
+                primeiro = atual.Prox;
+                atual.Prox.Anterior = null;
+                PosicionarNoPrimeiro();
+            }
+            else if (EstaNoFim)
+            {
+                ultimo = atual.Anterior;
+                atual.Anterior.Prox = null;
+                PosicionarNoUltimo();
+            }
+            excluiu = true;
+        }
+        return excluiu;
     }
     public bool IncluirNoInicio(Dado novoValor)
     {
@@ -157,18 +194,40 @@ class ListaDupla<Dado> : IDados<Dado>
         novoNo.Prox = null;
         novoNo.Anterior = ultimo;
         ultimo = novoNo;
-        ultimo.Prox = null;
         quantosNos++;
 
         return true;
     }
     public bool Incluir(Dado novoValor)         // (bool) Inserir nó com Dado em ordem crescente
     {
-        throw new NotImplementedException();
+        if (EstaVazio)
+            IncluirNoInicio(novoValor);
+
+        else if (novoValor.CompareTo(primeiro.Info) < 0)
+            IncluirNoInicio(novoValor);
+
+        else if (novoValor.CompareTo(ultimo.Info) > 0)
+            IncluirAposFim(novoValor);
+
+        else if (!Existe(novoValor, out int pos))
+        {
+            Incluir(novoValor, PosicaoAtual-1);
+        }
+        return true;
     }
     public bool Incluir(Dado novoValor, int posicaoDeInclusao)  // inclui novo nó na posição indicada da lista
     {
-        throw new NotImplementedException();
+        var novo = new NoDuplo<Dado>(novoValor);
+        PosicionarNoPrimeiro();
+        for(int i = 0; i < posicaoDeInclusao; i++)
+        {
+            AvancarPosicao();
+        }
+        novo.Prox = atual.Prox;
+        atual.Prox.Anterior = novo;
+        novo.Anterior = atual;
+        atual.Prox = novo;
+        return true;
     }
     public Dado this[int indice]
     {
@@ -213,6 +272,7 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void ExibirDados(ListBox lista)  // lista os dados armazenados na lista no listbox passado como parâmetro
     {
+        lista.Items.Clear();
         atual = primeiro;
         while (atual != null)
         {
@@ -222,6 +282,7 @@ class ListaDupla<Dado> : IDados<Dado>
     }
     public void ExibirDados(ComboBox lista) // lista os dados armazenados na lista no combobox passado como parâmetro
     {
+        lista.Items.Clear();
         atual = primeiro;
         while(atual != null)
         {
